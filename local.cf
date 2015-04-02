@@ -86,3 +86,4 @@ ifplugin Mail::SpamAssassin::Plugin::Shortcircuit
 endif # Mail::SpamAssassin::Plugin::Shortcircuit
 
 clear_originating_ip_headers
+originating_ip_headers X-Lavaboom-No-Such-Header-Exists

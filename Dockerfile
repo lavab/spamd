@@ -1,9 +1,9 @@
 FROM ubuntu:trusty
 MAINTAINER Piotr Zduniak <piotr@zduniak.net>
 
-COPY local.cf /etc/mail/spamassassin/local.cf
-
 RUN apt-get update -y && apt-get install spamassassin -y && apt-get clean -y && rm -rf /var/lib/apt-lists/*
+
+COPY local.cf /etc/mail/spamassassin/local.cf
 
 RUN /etc/cron.daily/spamassassin
 
